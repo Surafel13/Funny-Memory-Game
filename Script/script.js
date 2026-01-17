@@ -134,3 +134,11 @@ function startTimer() {
         updateDisplay();
     }, 1000);
 }
+
+
+// Start game on load
+window.addEventListener('load', () => {
+    initParticles();
+    startGame();
+    startTimer();
+});
