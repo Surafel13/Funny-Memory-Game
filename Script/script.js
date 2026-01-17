@@ -28,7 +28,6 @@ function initParticles() {
     }
 }
 
-
 function toggleDarkMode() {
     document.body.classList.toggle('dark');
 }
@@ -110,7 +109,6 @@ function checkMatch() {
     }
 }
 
-
 function winGame() {
     isGameWon = true;
     clearInterval(interval);
@@ -134,7 +132,6 @@ function startTimer() {
         updateDisplay();
     }, 1000);
 }
-
 
 // Start game on load
 window.addEventListener('load', () => {

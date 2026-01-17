@@ -39,7 +39,6 @@ h1 {
     opacity: 0.9;
 }
 
-
 .stats {
     display: flex;
     gap: 2rem;
@@ -106,7 +105,6 @@ h1 {
     backdrop-filter: blur(10px);
 }
 
-
 body.dark .card-back {
     background: linear-gradient(135deg, #ff4757, #ffa502);
 }
@@ -123,7 +121,6 @@ body.dark .card-front {
     background: linear-gradient(135deg, #3742fa, #4834d4);
     color: white;
 }
-
 
 .controls {
     display: flex;
@@ -156,7 +153,6 @@ button:active {
     transform: translateY(0);
 }
 
-
 .win-message {
     position: fixed;
     top: 50%;
@@ -183,7 +179,6 @@ button:active {
     right: 20px;
     font-size: 1.5rem;
 }
-
 
 @keyframes slideDown {
     from {
@@ -215,7 +210,6 @@ button:active {
         font-size: 2.5rem;
     }
 }
-
 
 /* Particles for fun */
 .particles {
