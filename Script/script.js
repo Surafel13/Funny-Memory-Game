@@ -109,3 +109,28 @@ function checkMatch() {
         }, 1000);
     }
 }
+
+
+function winGame() {
+    isGameWon = true;
+    clearInterval(interval);
+    finalMoves.textContent = moves;
+    if (moves < bestMoves) {
+        bestMoves = moves;
+        localStorage.setItem('bestMoves', bestMoves);
+        bestEl.textContent = bestMoves;
+    }
+    winMessage.classList.add('show');
+}
+
+function updateDisplay() {
+    movesEl.textContent = moves;
+    timeEl.textContent = timer;
+}
+
+function startTimer() {
+    interval = setInterval(() => {
+        timer++;
+        updateDisplay();
+    }, 1000);
+}
