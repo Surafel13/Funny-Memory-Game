@@ -78,3 +78,34 @@ function startGame() {
         }, 2000);
     }, 500);
 }
+
+function flipCard(e) {
+    if (flippedCards.length >= 2 || this.classList.contains('flipped') || this.classList.contains('matched') || isGameWon) return;
+
+    this.classList.add('flipped');
+    flippedCards.push(this);
+
+    if (flippedCards.length === 2) {
+        moves++;
+        updateDisplay();
+        checkMatch();
+    }
+}
+
+function checkMatch() {
+    const [card1, card2] = flippedCards;
+    if (card1.dataset.emoji === card2.dataset.emoji) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        flippedCards = [];
+        if (document.querySelectorAll('.matched').length === cards.length) {
+            winGame();
+        }
+    } else {
+        setTimeout(() => {
+            card1.classList.remove('flipped');
+            card2.classList.remove('flipped');
+            flippedCards = [];
+        }, 1000);
+    }
+}
