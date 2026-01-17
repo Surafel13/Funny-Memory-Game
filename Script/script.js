@@ -53,3 +53,28 @@ function createCard(emoji, index) {
     card.addEventListener('click', flipCard);
     return card;
 }
+
+function startGame() {
+    cards = [...emojis].sort(() => Math.random() - 0.5);
+    flippedCards = [];
+    moves = 0;
+    timer = 0;
+    isGameWon = false;
+    clearInterval(interval);
+    updateDisplay();
+    gameBoard.innerHTML = '';
+    winMessage.classList.remove('show');
+
+    cards.forEach((emoji, index) => {
+        const card = createCard(emoji, index);
+        gameBoard.appendChild(card);
+    });
+
+    // Flip all briefly to show
+    setTimeout(() => {
+        document.querySelectorAll('.card').forEach(c => c.classList.add('flipped'));
+        setTimeout(() => {
+            document.querySelectorAll('.card').forEach(c => c.classList.remove('flipped'));
+        }, 2000);
+    }, 500);
+}
