@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Memory Match Game</title>
+
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle Dark Mode">🌙</button>
+
+    <div class="particles" id="particles"></div>
+
+    <div class="header">
+        <h1>🧠 Memory Match</h1>
+        <p class="subtitle">Flip cards and find matching pairs! 🎉</p>
+        <div class="stats">
+            <div class="stat">Moves: <span id="moves">0</span></div>
+            <div class="stat">Time: <span id="time">0</span>s</div>
+            <div class="stat">Best: <span id="best">∞</span></div>
+        </div>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="controls">
+        <button onclick="startGame()">🔄 New Game</button>
+    </div>
+
+    <div class="win-message" id="winMessage">
+        🎉 You Won!<br>
+        <small>Share your moves: <span id="finalMoves"></span></small>
+    </div>
+
+    <script src="./Script/script.js"></script>
+</body>
+</html>
