@@ -27,3 +27,29 @@ function initParticles() {
         particles.appendChild(particle);
     }
 }
+
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+}
+
+function createCard(emoji, index) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.emoji = emoji;
+    card.dataset.index = index;
+
+    const back = document.createElement('div');
+    back.className = 'card-face card-back';
+    back.textContent = '❓';
+
+    const front = document.createElement('div');
+    front.className = 'card-face card-front';
+    front.textContent = emoji;
+
+    card.appendChild(back);
+    card.appendChild(front);
+
+    card.addEventListener('click', flipCard);
+    return card;
+}
