@@ -38,3 +38,34 @@ h1 {
     font-size: 1.2rem;
     opacity: 0.9;
 }
+
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s;
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    max-width: 500px;
+    width: 90vw;
+    max-height: 500px;
+    perspective: 1000px;
+}
