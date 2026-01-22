@@ -8,7 +8,7 @@ The goal of the game is to test and improve your memory by matching cards in the
 ## 🌐 Live Demo
 
 👉 **Play the game here:**  
-https://funny-memory-game/
+[https://funny-memory-game/](https://funny-game1212.netlify.app/)
 
 *(Replace this link with your actual live demo URL)*
 
